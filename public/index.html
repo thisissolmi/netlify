@@ -1,75 +1,28 @@
-<!DOCTYPE html>
-<html>
-
-
-   
-<body>
-    <button id="myButton">홈화면으로 이동하기</button>
-
-    <script>
-        var button = document.getElementById("myButton");
-        button.addEventListener("click", function() {
-            window.location.href = "file:///Users/kimsolmi/Desktop/2023-2/PP/Project2/index.html";
-        });
-    </script>
-</body>
-
-
-
-</body>
 </html>
-<body>
-  <h1> HERE IS HOME PAGE ! !  </h1>
-  <h4>[PP] project2_22200103_KimSolmi </h4>
-  <h4> This is my second project </h4>
-<div class="container wrapper">
-  <div id="top">
-    <h1>Index</h1>
-    <h4>이런 페이지가 있어요~</h4>
-  </div>
-  <div class="wrapper">
-   <div id="menubar">
-     <ul id="menulist">
-    
-      <li class="menuitem" onclick="noStyles()">No Style 
-       <li class="menuitem" onclick="reStyle(0)">Stylesheet 1
-       <li class="menuitem" onclick="reStyle(1)">Stylesheet 2
-       <li class="menuitem" onclick="reStyle(2)">exmaple
-       <li class="menuitem" onclick="reStyle(3)"> form  
-     </ul>
-   
-  </div>  
-  
-  <!-- <div id="bottom">
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-  </div> -->
-</div>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link href = "index.css" rel = "Stylesheet">
 </head>
+
 <body>
-  <div id="main">
-    <h1>Try Click!</h1>
-    <p> if you want to click, you try it! 
-    <br>
-    <br>
-    <a href="nostyle.html" >No style,</a>
-    <a href="style1.html" >Stylesheet1,</a>
-    <a href="style2.html" >Stylesheet2,</a>
-    <a href="example.html" >example,</a>
-    <a href="form.html" >form,</a>
-  </p>
-  
-  </div>
+  <button id="myButton" onclick="location.href ='./index.html'">홈화면으로 이동하기</button>
+
+  <h1> HERE IS HOME PAGE ! ! </h1>
+  <h4>[PP] project2_22200103_KimSolmi </h4>
+  <h4> This is my second project </h4>
+  <h4>이런 페이지가 있습니다!</h4>
+  <ul>
+    <li onclick="location.href = './nostyle.html'">No Style</li>
+    <li onclick="location.href = './style1.html'">Stylesheet 1</li>
+    <li onclick="location.href = './style2.html'">Stylesheet 2</li>
+    <li onclick="location.href = './example.html'">exmaple</li>
+    <li onclick="location.href = './form.html'">form</li>
+  </ul>
 </body>
+
 </html>
-
-
-
