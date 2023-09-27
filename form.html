@@ -13,8 +13,26 @@ form.html
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  
 </head>
+
 <body>
+  <button id="myButton">홈화면으로 이동하기 </button>
+
+  <script>
+      var button = document.getElementById("myButton");
+      button.addEventListener("click", function() {
+          window.location.href = "file:///Users/kimsolmi/Desktop/2023-2/PP/Project2/index.html";
+      });
+  </script>
+</body>
+
+
+<p style="color:blue;"> copyright ⓒ 2023 KIM SOLMI ALl rights reserved. </p>
+<body>
+  <h4>First name / Last name 을 입력하세요. </h4>
+  
+  
   <form>
     <label for="fname">First name:</label><br>
     <input type="text" id="fname" name="fname"><br>
@@ -23,16 +41,34 @@ form.html
   </form>
   <label> - - - - - - - - - - - - - - - - - - - -  </label> <br>
   <form>
-    <input type="radio" id="html" name="fav_language" value="HTML">
-  <label for="html">HTML</label><br>
-  <input type="radio" id="css" name="fav_language" value="CSS">
-  <label for="css">CSS</label><br>
-  <input type="radio" id="javascript" name="fav_language" value="JavaScript">
-  <label for="javascript">JavaScript</label>
+    <h4>성별을 선택하세요 </h4>
+    <input type="radio" id="남성" name="man" value="man">
+  <label for="html">남성</label><br>
+  <input type="radio" id="여성" name="man" value="woman">
+  <label for="css">여성</label><br>
   </form>
   <label> - - - - - - - - - - - - - - - - - - - -  </label> <br>
+  <dic className="region">
+    <h4> RC 를 선택하세요.  </h4>
+    <select name = "domitory">
+      <optgroup label = "기숙사" >
+        <option value = "1"> 토레이 </option>
+        <option value = "2"> 카마이클 </option>
+        <option value = "3"> 장기려 </option>
+        <option value = "4"> 열송학사 </option>
+        <option value = "5"> 손양원 </option>
+      </optgroup>
+    </select>
+  </dic>
+  <form> 
+    <label> - - - - - - - - - - - - - - - - - - - -  </label> <br>
+    <h4>오늘의 날짜를 선택하세요 </h4>
+    <input type="date" value="xxx" min="yyy" max="zzz">
+  </form>
+ 
+  <label> - - - - - - - - - - - - - - - - - - - -  </label> <br>
   <form>
-    <label> [ Todo list ] </label> <br>
+    <h4> [Todo List] </h4>
     <input type="checkbox" id="shower" name="shower"value="shower">
     <label for="shower"> shower</label><br>
     <input type="checkbox" id="study" name="study" value="study">
@@ -41,48 +77,59 @@ form.html
     <label for="sleep"> sleep </label>
   </form>
   <label> - - - - - - - - - - - - - - - - - - - -  </label> <br>
-  <dic className="region">
-    <label> [ 거주하는 기숙사를 선택하세요 ] </label> <br>
-    <select name = "domitory">
-      <optgroup label = "기숙사" >
-        <option value = "1"> 비전관 </option>
-        <option value = "2"> 창조관 </option>
-        <option value = "3"> 벧엘관 </option>
-        <option value = "4"> 은혜관 </option>
-        <option value = "5"> 갈대상자관 </option>
-      </optgroup>
-    </select>
-  </dic>
-  <form> 
-    <label> - - - - - - - - - - - - - - - - - - - -  </label> <br>
-    <label> [ 오늘의 날짜를 선택하세요 ] </label> <br>
-    <input type="date" value="xxx" min="yyy" max="zzz">
-  </form>
+  
   <form>
-    <label> - - - - - - - - - - - - - - - - - - - -  </label> <br>
-    <p><textarea cols="20" rows="10"></textarea></p>
-    <p><input type="submit" value="Submit"></p>
-  </form>
-  <form>
-    <label> - - - - - - - - - - - - - - - - - - - -  </label> <br>
-    <fieldset>
-      <legend> 가장 좋아하는 음식 종류 </legend>
+    <h4> [커피 종류] </h4>
+    <optgroup label="커피(Coffee)">
+        <option value="americano">아메리카노</option>
+        <option value="caffe latte">카페라떼</option>
+        <option value="espresso">에스프레소</option>
+    </optgroup>
+    <h4> [티 종류 ] </h4>
+    <optgroup label="티(Tea)">
+        <option value="earl grey">얼그레이티</option>
+        <option value="jasmine">자스민티</option>s
+    </optgroup>
+</form>
 
-      <!-- <input type="radio" id="html" name="fav_language" value="HTML">
-  <label for="html">HTML</label><br>
-  <input type="radio" id="css" name="fav_language" value="CSS">
-  <label for="css">CSS</label><br>
-  <input type="radio" id="javascript" name="fav_language" value="JavaScript"> 
-  <label for="javascript">JavaScript</label >-->
+<label> - - - - - - - - - - - - - - - - - - - -  </label> <br>
+<h4> RC 를 선택하세요.  </h4>
+<label for="Residence choice">Choose the Residence :</label>
+<input list="Residence-flavors" id="Residence-choice" name="Residence-choice" />
+<datalist id="Residence-flavors">
+  <option value="Gyeonggi-do"></option>
+  <option value="Seoul"></option>
+  <option value="Incheon"></option>
+  <option value="Daegu"></option>
+  <option value="Gwanju"></option>
+  <option value="Gangwon-do"></option>
+  <option value="Ulsan"></option>
+  <option value="Gyeongsangnam-do"></option>
+  <option value="Gyeongsangbuk-do"></option>
+  <option value="Jeju-do"></option>
 
-      <input type="radio" id="korea" name="korea" value="korea" />
-      <label for="korea">korea</label><br />
-      <input type="radio" id="chiness" name="chiness" value="chiness" />
-      <label for="chiness">chiness</label><br />
-      <input type="radio" id="american" name="american" value="american" />
-      <label for="american">american</label>
-    </fieldset>
-  </form>
+  
+
+</datalist> <br>
+<label> - - - - - - - - - - - - - - - - - - - -  </label> <br>
+
+<form>
+
+  <fieldset>
+    <legend> 가장 좋아하는 음식 종류 </legend>
+    <input type="radio" id="korea" name="korea" value="korea" />
+    <label for="korea">korea</label><br />
+    <input type="radio" id="chiness" name="chiness" value="chiness" />
+    <label for="chiness">chiness</label><br />
+    <input type="radio" id="american" name="american" value="american" />
+    <label for="american">american</label>
+  </fieldset>
+</form>
+<label> - - - - - - - - - - - - - - - - - - - -  </label> 
+<form>
+  <p><textarea cols="20" rows="10"></textarea></p>
+  <p><input type="submit" value="Submit"></p>
+</form>
 
   <form>
     <label> 
